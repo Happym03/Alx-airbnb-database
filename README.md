@@ -1,2 +1,14 @@
 # Alx-airbnb-database
 Alx-airbnb-database
+The DataScape: Mastering Database Design project is a comprehensive and practical exercise focused on designing and building a robust relational database. It guides you through the entire process, from conceptualizing the database with an Entity-Relationship Diagram (ERD) to writing the SQL scripts that bring the design to life.
+​0. Define Entities and Relationships in ER Diagram
+​An Entity-Relationship Diagram (ERD) is a visual blueprint of a database. It shows the entities (the "things" you want to store data about, like User or Property), their attributes (the data points for each entity, like user_id or property_name), and the relationships between them (how entities connect, such as a User books a Property).  This first task requires you to read the provided database specification and translate the requirements into a clear ERD using a tool like Draw.io. The goal is to visualize the database's structure before you start writing any code, ensuring that all entities and their connections are properly defined.
+​1. Normalize Your Database Design
+​Database normalization is a process of organizing data to reduce redundancy and improve data integrity. The objective of this task is to apply these principles to your ERD and ensure your design meets the Third Normal Form (3NF). In simple terms, a database is in 3NF if:
+​It is in 2NF (meaning all non-key attributes are fully dependent on the primary key).
+​It has no transitive dependencies (meaning no non-key attribute depends on another non-key attribute).
+​By normalizing your design, you create a more efficient and reliable database. You will document your process and explain the changes you made in a Markdown file.
+​2. Design Database Schema (DDL)
+​This task involves using SQL Data Definition Language (DDL) to translate your normalized ERD into a functional database schema. You'll write CREATE TABLE statements for each of your entities. This is where you define the columns, their data types (e.g., VARCHAR, INT), and crucial constraints like PRIMARY KEY and FOREIGN KEY. The primary key uniquely identifies each record in a table, while a foreign key establishes the relationship between two tables. For example, a bookings table would have a user_id foreign key that references the id of a user in the users table. You'll also include INDEXES on columns that are frequently used in queries to optimize performance.
+​3. Seed the Database with Sample Data
+​The final task is to populate your newly created database with realistic data using SQL Data Manipulation Language (DML). You will write INSERT INTO statements to add sample data for users, properties, bookings, and payments. This step is crucial for testing your schema and simulating real-world scenarios. The goal is to create data that reflects how a live Airbnb-like application would function, allowing you to test queries and confirm that your database design works as intended.
